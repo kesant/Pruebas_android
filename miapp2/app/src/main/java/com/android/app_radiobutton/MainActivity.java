@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     private EditText et1,et2;//declaramos las dos entradas de texto que son de tipo edit text
     private TextView tv1;//declaramos el cuadro de tipo text view
-    private RadioButton rb1,rb2;//declaramos los botones que se encuentran dentro de radio group
+    private RadioButton rb1,rb2,rb3,rb4;//declaramos los botones que se encuentran dentro de radio group
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         tv1=(TextView)findViewById(R.id.txt_resultado);
         rb1=(RadioButton)findViewById(R.id.rb_sumar);
         rb2=(RadioButton)findViewById(R.id.rb_restar);
+        rb3=(RadioButton)findViewById(R.id.rb_multiplicacion);
+        rb4=(RadioButton)findViewById(R.id.rb_division);
     }
     //metodo para el boton calcular
     public void Calcular(View view){
@@ -40,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
             //como queremos mostrar el valor en un text view obligatoriamente ncesitamos pasar de entero a string
             String resultado=String.valueOf(resta);
             tv1.setText(resultado);
-        }
+        }else if(rb3.isChecked()==true){
+            int multiplicacion=valor1_int*valor2_int;
+            //como queremos mostrar el valor en un text view obligatoriamente ncesitamos pasar de entero a string
+            String resultado=String.valueOf(multiplicacion);
+            tv1.setText(resultado);
+    }
     }
 }

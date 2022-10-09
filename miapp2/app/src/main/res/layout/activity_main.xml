@@ -31,16 +31,18 @@
             android:textSize="24sp" />
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/rb_multiplicacion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:text="@string/rb3"
+            android:textSize="24sp" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/rb_division"
             android:layout_width="match_parent"
-            android:layout_height="32dp"
-            android:text="RadioButton" />
+            android:layout_height="48dp"
+            android:text="@string/rb4"
+            android:textSize="24sp" />
     </RadioGroup>
 
     <EditText
